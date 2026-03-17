@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Akagi Deck</title>
+
+<style>
+
+body{
+margin:0;
+background:#0a0a0a;
+overflow:hidden;
+}
+
+.scene{
+position:relative;
+width:100vw;
+height:100vh;
+}
+
+/* asap */
+.smoke{
+position:absolute;
+bottom:-100px;
+width:200%;
+height:400px;
+background:radial-gradient(circle, rgba(200,200,200,0.15), transparent 70%);
+filter:blur(50px);
+animation:smoke 12s linear infinite;
+}
+
+@keyframes smoke{
+from{transform:translateX(-20%)}
+to{transform:translateX(20%)}
+}
+
+/* badan kapal */
+.akagi{
+position:absolute;
+bottom:160px;
+left:50%;
+transform:translateX(-50%);
+width:700px;
+height:160px;
+background:#111;
+clip-path: polygon(
+0% 70%,10% 60%,40% 60%,45% 45%,60% 45%,65% 30%,75% 30%,80% 45%,100% 45%,100% 70%,90% 80%,60% 85%,30% 90%,10% 85%
+);
+}
+
+/* deck */
+.deck{
+position:absolute;
+bottom:210px;
+left:50%;
+transform:translateX(-50%);
+width:760px;
+height:30px;
+background:#1a1a1a;
+}
+
+/* garis runway */
+.runway{
+position:absolute;
+bottom:220px;
+left:50%;
+transform:translateX(-50%);
+width:600px;
+height:4px;
+background:white;
+opacity:0.7;
+box-shadow:
+0 -10px 0 white,
+0 10px 0 white,
+0 20px 0 white;
+}
+
+/* pulau */
+.island{
+position:absolute;
+bottom:240px;
+left:57%;
+width:40px;
+height:60px;
+background:#151515;
+}
+
+/* kabut depan */
+.fog{
+position:absolute;
+bottom:0;
+width:100%;
+height:200px;
+background:linear-gradient(to top,#0a0a0a,transparent);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+
+<div class="smoke"></div>
+
+<div class="akagi"></div>
+<div class="deck"></div>
+<div class="runway"></div>
+<div class="island"></div>
+
+<div class="fog"></div>
+
+</div>
+
+</body>
+</html>
